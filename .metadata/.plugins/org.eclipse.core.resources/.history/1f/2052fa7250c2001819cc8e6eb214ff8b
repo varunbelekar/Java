@@ -1,0 +1,30 @@
+package com.varun.collections;
+
+import java.util.HashSet;
+import java.util.Set;
+
+class Book{
+	String bookName;
+	String author;
+	public Book(String bookName, String author) {
+		super();
+		this.bookName = bookName;
+		this.author = author;
+	}
+	
+}
+public class HashSet1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Book b1=new Book("wings of fire","apj abdul kalam");
+		Book b2=new Book("Harrypotter","J.k Rowling");
+		Set<Book>al=new HashSet<Book>();
+		al.add(b1);
+		al.add(b2);
+		for(Book b:al){
+			System.out.println(b.bookName+" "+b.author);
+		}
+	}
+
+}

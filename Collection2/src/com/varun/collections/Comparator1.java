@@ -1,0 +1,70 @@
+package com.varun.collections;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+class Student2 {
+	int id;
+	String name;
+	public Student2(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}	
+}
+
+class NameComparator implements Comparator{
+	
+
+	@Override
+	public int compare(Object o1, Object o2) {
+		// TODO Auto-generated method stub
+		Student2 obj1=(Student2)o1;
+		Student2 obj2=(Student2)o2;
+		
+		
+		return obj1.name.compareTo(obj2.name);
+	}
+}
+
+class IdComparator implements Comparator{
+	
+
+	@Override
+	public int compare(Object o1, Object o2) {
+		// TODO Auto-generated method stub
+		Student2 obj1=(Student2)o1;
+		Student2 obj2=(Student2)o2;
+		
+		if(obj1.id > obj2.id){
+			return 1;
+		}
+		if(obj1.id < obj2.id){
+			return -1;
+		}
+		else{
+			return 0;
+		}
+		
+	}
+}
+
+public class Comparator1 {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Student2> l=new ArrayList<Student2>();
+		l.add(new Student2(1,"varun"));
+		l.add(new Student2(2,"anu"));
+		l.add(new Student2(3,"web"));
+		l.add(new Student2(4,"aru"));
+		l.add(new Student2(5,"zen"));
+		Collections.sort(l,new NameComparator());
+		for(Student2 st:l){
+			System.out.println(st.id+" "+st.name);
+		}
+	}
+
+}

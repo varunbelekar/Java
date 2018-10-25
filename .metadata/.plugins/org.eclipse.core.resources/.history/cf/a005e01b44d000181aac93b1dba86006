@@ -1,0 +1,23 @@
+package com.varun.collections;
+
+class Student2 {
+	int id;
+	String name;
+	public Student2(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	
+	
+	
+}
+
+public class Comparator1 {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

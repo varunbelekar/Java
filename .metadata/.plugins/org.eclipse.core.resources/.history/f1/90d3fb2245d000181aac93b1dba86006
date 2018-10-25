@@ -1,0 +1,58 @@
+package com.varun.collections;
+
+import java.util.Comparator;
+
+class Student2 {
+	int id;
+	String name;
+	public Student2(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}	
+}
+
+class NameComparator implements Comparator{
+	
+
+	@Override
+	public int compare(Object o1, Object o2) {
+		// TODO Auto-generated method stub
+		Student2 obj1=(Student2)o1;
+		Student2 obj2=(Student2)o2;
+		
+		
+		return obj1.name.compareTo(obj2.name);
+	}
+}
+
+class IdComparator implements Comparator{
+	
+
+	@Override
+	public int compare(Object o1, Object o2) {
+		// TODO Auto-generated method stub
+		Student2 obj1=(Student2)o1;
+		Student2 obj2=(Student2)o2;
+		
+		if(obj1.id > obj2.id){
+			return 1;
+		}
+		if(obj1.id < obj2.id){
+			return -1;
+		}
+		else{
+			return 0;
+		}
+		
+	}
+}
+
+public class Comparator1 {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

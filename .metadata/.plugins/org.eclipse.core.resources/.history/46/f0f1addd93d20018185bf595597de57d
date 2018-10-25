@@ -1,0 +1,35 @@
+
+interface A{
+	void show();
+}
+
+/*class Xyz implements A{
+
+	@Override
+	public void show() {
+		// TODO Auto-generated method stub
+		System.out.println("Hello");
+	}
+	
+}*/
+
+public class LambdaDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		A obj;
+		
+		//Anonymous Class
+		/*obj=new A(){
+			public void show(){
+				System.out.println("Hello");
+			}
+		};*/
+		obj=() ->{ //Lambda Expression
+			System.out.println("Hello1");  
+			};
+		
+		obj.show();
+	}
+
+}
